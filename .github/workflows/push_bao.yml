@@ -14,8 +14,8 @@ on:
     branches:    
       - master
   schedule:
-    # 每60分钟执行一次
-    - cron:  '0 0,9-23 * * *'
+    # UTC时间1:00~16:00执行
+    - cron:  '0 1-16 * * *'
       
 jobs:
   build: 
