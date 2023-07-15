@@ -47,10 +47,6 @@ jobs:
       - name: ls
         run: |
           ls
-          
-      - name: Cat
-        run: |
-          cat ./weibo.go
 
       - name: Run
         run: ./weibo -token ${{ secrets.APP_TOKEN }} -uid ${{ secrets.UID }} -tag 爆 -cookie ${{ secrets.COOKIE }}

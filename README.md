@@ -1,25 +1,13 @@
 # weiboPush-go-actions
-微博热搜(热、爆，新)标签推送微信
-
-##  现在只开启 类型为 `爆` 的热搜, 类型为 `热`的太多了，推送频繁所以关掉了
-
-打开链接，直接关注即可。
-[wxpusher.zjiecode.com/api/qrcode/HTbI3AuUOlmzEpJFjKlXnuiEZyWllP2DEuLGMh6tFOlVXVS351BSXzbHMO07QC1w.jpg](http://wxpusher.zjiecode.com/api/qrcode/HTbI3AuUOlmzEpJFjKlXnuiEZyWllP2DEuLGMh6tFOlVXVS351BSXzbHMO07QC1w.jpg)
-
-二维码：
-
-<img src="https://wxpusher.zjiecode.com/api/qrcode/HTbI3AuUOlmzEpJFjKlXnuiEZyWllP2DEuLGMh6tFOlVXVS351BSXzbHMO07QC1w.jpg"
- width="200px" />
+微博热搜(热、爆，新)标签推送微信，依赖WXPusher项目
 
 
 ## 用途
 
-定时读取微博热搜，将爆文热搜第一时间推送到微信，前排吃瓜。
+定时读取微博热搜，将热搜第一时间推送到微信，前排吃瓜。
 
 
 ## 教程
-
-### 觉得教程麻烦可以直接提 issue ,看到后会添加你的 Uid
 
 1. fork项目
 
@@ -41,7 +29,8 @@ https://wxpusher.zjiecode.com/admin/main
 ```
 cron表达测试 ：https://crontab.guru
 
-4. 配置APP_TOKEN,UID(多个uid请用,拼接),TAG(填写 爆或者 热 或者 新)
+4. 配置APP_TOKEN,UID(多个uid请用,拼接),TAG(填写 爆或者 热 或者 新),COOKIE
+COOKIE 获取：使用浏览器打开一次热榜页面，导出cookie即可
 
 Settings--> secrets
 ![image.png](https://i.loli.net/2021/04/03/TNM2a8OSGXp6Z1F.png)
@@ -52,3 +41,5 @@ Settings--> secrets
 
 ![image.png](https://i.loli.net/2021/04/16/jYKTorZRBfmkghD.png)
 
+# Changelog
+1. 20230715 修复原项目不能通知的bug
