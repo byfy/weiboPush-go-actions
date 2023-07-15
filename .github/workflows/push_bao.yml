@@ -1,4 +1,4 @@
-name: push re to weixin
+name: push Tag to weixin
 on:
   workflow_dispatch:
           inputs:
@@ -47,6 +47,10 @@ jobs:
       - name: ls
         run: |
           ls
+          
+      - name: Cat
+        run: |
+          cat ./weibo.go
 
       - name: Run
         run: ./weibo -token ${{ secrets.APP_TOKEN }} -cookie ${{ secrets.COOKIE }} -uid ${{ secrets.UID }} -tag 爆
